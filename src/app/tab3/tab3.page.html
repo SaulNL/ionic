@@ -7,11 +7,22 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-grid>
+    <ion-row>
+      @for(item of listausuarios; track $index){
+    
+      <ion-col size="12" size-lg="3" size-md="4" size-sm="4" size-xs="6">
+        <ion-card (click)="abrirModalDetalle(item)">
+          <img src="Silhouette of montains" [src]="item.avatar"/>
+      <ion-card-header>
+        <ion-card-title>{{item.name}} </ion-card-title>
+        <ion-card-subtitle>
+         {{item.email}}
+       </ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    </ion-col>
+    }
+    </ion-row>
+    </ion-grid>
 </ion-content>

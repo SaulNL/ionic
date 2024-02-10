@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    
+    <ion-title>Usuarios</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrarModal()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-card>
+    <img alt="Silhouette of a person's head" [src]="usuarios.avatar"/>
+    <ion-card-header>
+    <ion-card-title>{{ usuarios.name }}</ion-card-title>
+    <ion-card-subtitle>{{ usuarios.email }}</ion-card-subtitle>
+  </ion-card-header>
+</ion-card>
+</ion-content>
